@@ -32,7 +32,6 @@ h1::before {
     height: 50%;
     border-radius: 3px;
     border: 1px solid silver;
-    padding: 5px;
     text-align: center;
 }
 
@@ -43,6 +42,11 @@ h1::before {
 .far {
     font-size: 25px;
     padding: 10px;
+}
+
+.fab:hover,
+.far:hover {
+    cursor: pointer;
 }
 
 

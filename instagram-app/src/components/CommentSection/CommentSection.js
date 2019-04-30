@@ -4,12 +4,15 @@ import "./CommentSection.css"
 
 function CommentSection(props){
     return ( 
-            <div className="comment-section"> 
+            <section className="comment-section"> 
                 {props.comments.map(renderComment)} 
                 <span className="timestamp">{props.timestamp}</span>
                 <hr/>
-                <input className="add-comment" placeholder="Add a comment..." />
-            </div> )
+                <form className="add-comment-section">
+                    <input className="add-comment" placeholder="Add a comment..." />
+                    <button className="comment-btn"><i className="fas fa-ellipsis-h"></i></button>
+                </form>
+            </section> )
 }
 
 function renderComment(props, index){
