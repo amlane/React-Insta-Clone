@@ -1,21 +1,34 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./CommentSection.css"
+import CommentInput from "./CommentInput";
 
-function CommentSection(props){
+class CommentSection extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            comments: props.comments,
+            comment: ""
+        }
+    }
+
+
+    render() {
     return ( 
             <section className="comment-section"> 
-                {props.comments.map(renderComment)} 
-                <span className="timestamp">{props.timestamp}</span>
+                {this.props.comments.map(renderComments)} 
+                <span className="timestamp">{this.props.timestamp}</span>
                 <hr/>
-                <form className="add-comment-section">
-                    <input className="add-comment" placeholder="Add a comment..." />
-                    <button className="comment-btn"><i className="fas fa-ellipsis-h"></i></button>
-                </form>
+               
+
+                <CommentInput 
+                comment={this.state.comment}
+                />
             </section> )
 }
+}
 
-function renderComment(props, index){
+function renderComments(props, index){
     console.log(props)
     return (
         <div key={index*100} className="comment">

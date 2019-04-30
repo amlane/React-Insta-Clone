@@ -8,8 +8,13 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = {
-      dummyData: dummyData
+      dummyData: []
     }
+  }
+
+  componentDidMount(){
+    console.log("Setting the data")
+    this.setState({ dummyData: dummyData })
   }
 
   render(){
