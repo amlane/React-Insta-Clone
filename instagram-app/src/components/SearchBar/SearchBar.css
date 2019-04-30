@@ -33,6 +33,7 @@ h1::before {
     border-radius: 3px;
     border: 1px solid silver;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 .header-icons {

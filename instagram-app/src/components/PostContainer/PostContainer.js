@@ -25,7 +25,6 @@ function renderPost(props, index){
 
                 <CommentSection
                 comments={props.comments}
-                timestamp={props.timestamp}
                 />
 
             </div>
