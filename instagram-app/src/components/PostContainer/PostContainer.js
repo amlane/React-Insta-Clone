@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import "./PostContainer.css";
-import CommentSection from "./CommentSection";
+import CommentSection from "../CommentSection/CommentSection";
 
 function PostContainer(props){
     return props.dummyData.map(renderPost)

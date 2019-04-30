@@ -3,6 +3,10 @@
     flex-direction: column;
     flex-wrap: wrap;
     font-family: 'Roboto', sans-serif;
+    border: 1px solid silver;
+    box-shadow: 0 0 8px silver;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .post-header {

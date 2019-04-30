@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import SearchBar from './components/SearchBar';
-import dummyData from './components/dummy-data';
-import PostContainer from './components/PostContainer';
+import SearchBar from './components/SearchBar/SearchBar';
+import dummyData from './dummy-data';
+import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends React.Component {
   constructor(){

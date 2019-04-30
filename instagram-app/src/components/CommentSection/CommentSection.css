@@ -22,12 +22,17 @@
 }
 
 .add-comment {
-    width: 100%;
+    width: 98%;
     height: 75px;
-    border: none;
+    border: 0px solid;
+    margin: 0 auto;
+}
+
+input:focus{
+    outline: none;
 }
 
 hr {
     color: silver;
-    width: 100%;
+    width: 98%;
 }
