@@ -24,12 +24,17 @@ class App extends React.Component {
     })
   }
 
+  preventRefresh = (e) => {
+    e.preventDefault();
+  }
+
   render(){
   return (
     <div className="App">
 
       <SearchBar
       searchHandler={this.searchHandler}
+      preventRefresh={this.preventRefresh}
       />
 
      <div className="card-container"> 

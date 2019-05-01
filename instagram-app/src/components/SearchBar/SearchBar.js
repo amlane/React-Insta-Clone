@@ -8,11 +8,12 @@ const SearchBar = props => {
                 <i className="fab fa-instagram "></i>
                 <h1>Instagram</h1>
             </div>
-            <form>
+            <form className="search-container">
+            <button className="search-btn" onClick={props.preventRefresh}><i class="fas fa-search"></i></button>
             <input 
             className="input" 
-            placeholder="🔍 Search" 
-            type="text"
+            placeholder="Search users..." 
+            type="search"
             onChange={props.searchHandler}
             />
             </form>

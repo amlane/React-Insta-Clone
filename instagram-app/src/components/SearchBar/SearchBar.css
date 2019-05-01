@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
+    height: 85px;
     width: 1200px;
     min-width: 1200px;
     position: fixed;
@@ -32,10 +32,27 @@ h1::before {
     padding: 15px;
 }
 
+.search-container {
+    border: 1px solid silver;
+    border-radius: 3px;
+}
+
+.search-btn{
+    border: 0px solid transparent;
+    background: transparent;
+    height: 25px;
+    border-top-left-radius: 3px;
+    padding: 5px;
+}
+
+.search-btn:hover {
+    cursor: pointer;
+}
+
 .input {
     height: 25px;
-    border-radius: 3px;
-    border: 1px solid silver;
+    border: 0px solid silver;
+    border-left: 0px solid transparent;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
