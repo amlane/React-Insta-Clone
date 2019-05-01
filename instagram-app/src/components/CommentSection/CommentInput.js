@@ -12,6 +12,7 @@ function CommentInput(props){
             type="text"
             value={props.comment}
             onChange={props.handleInput}
+
             />
 
             <button 

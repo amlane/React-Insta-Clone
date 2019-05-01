@@ -3,13 +3,11 @@ import PropTypes from "prop-types";
 import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection";
 
-function PostContainer(props){
-    return props.dummyData.map(renderPost)
-}
 
-
-function renderPost(props, index){
-    return (
+const PostContainer = props => {
+    console.log(props)
+    return props.dummyData.map( (props, index) => {
+        return (
             <div key={index} className="card">
                 <div className="post-header">
                     <img src={props.thumbnailUrl} className="thumbnail-img" alt="thumbnail"/>
@@ -29,6 +27,7 @@ function renderPost(props, index){
 
             </div>
         )
+    })
 }
 
 PostContainer.propTypes = {

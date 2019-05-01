@@ -5,10 +5,11 @@ import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends React.Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
-      dummyData: []
+      dummyData: [], 
+      searchText: ""
     }
   }
 
@@ -17,15 +18,23 @@ class App extends React.Component {
     this.setState({ dummyData: dummyData })
   }
 
+  searchHandler = (e) => {
+    this.setState({ searchText: e.target.value })
+  }
+
   render(){
   return (
     <div className="App">
 
-      <SearchBar />
-
-      <PostContainer 
-      dummyData = {this.state.dummyData}
+      <SearchBar
+      searchHandler={this.searchHandler}
       />
+
+     <div className="card-container"> 
+      <PostContainer 
+      dummyData = {this.state.dummyData.filter(post => post.username.includes(this.state.searchText))} 
+      />
+     </div>
 
     </div>
   );

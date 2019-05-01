@@ -1,20 +1,27 @@
 import React from 'react';
 import './SearchBar.css'
 
-function SearchBar(props){
+const SearchBar = props => {
     return (
-        <div className="header-container">
+        <header className="header-container">
             <div className="logo-title">
                 <i className="fab fa-instagram "></i>
                 <h1>Instagram</h1>
             </div>
-            <input className="input" placeholder="🔍 Search" />
+            <form>
+            <input 
+            className="input" 
+            placeholder="🔍 Search" 
+            type="text"
+            onChange={props.searchHandler}
+            />
+            </form>
             <div className="header-icons">
                 <i className="far fa-compass"></i>
                 <i className="far fa-heart"></i>
                 <i className="far fa-user"></i>
             </div>
-        </div>
+        </header>
     )
 }
 

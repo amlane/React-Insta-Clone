@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./CommentSection.css"
 import CommentInput from "./CommentInput";
 import Comment from "./Comment";
@@ -16,6 +15,7 @@ class CommentSection extends React.Component{
 
     addNewComment = e => {
         e.preventDefault(); 
+        if(!this.state.comment) return;
         let newComment = { 
             username: "MzAnthropical", 
             text: this.state.comment
@@ -48,24 +48,7 @@ class CommentSection extends React.Component{
                 addNewComment={this.addNewComment}
                 />
             </section> )
-}
-}
-
-{/* function renderComments(props, index){
-    console.log(props)
-    return (
-        <div key={index*100} className="comment">
-            <span className="comment-user-name">{props.username}</span>
-            <span className="comment-content">{props.text}</span>
-        </div>
-    )
-} */}
-
-CommentSection.propTypes = {
-    comments: PropTypes.arrayOf(PropTypes.shape({
-        username: PropTypes.string,
-        text: PropTypes.string
-    }))
+ }
 }
 
 export default CommentSection;
