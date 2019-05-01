@@ -9,7 +9,8 @@ class CommentSection extends React.Component{
         super(props);
         this.state = {
             comments: props.comments,
-            comment: ""
+            comment: "", 
+            id: Math.floor(Math.random()*10)
         }
     }
 
@@ -33,10 +34,9 @@ class CommentSection extends React.Component{
 
     render() {
         return ( 
-            <section className="comment-section"> 
-                {this.state.comments.map((eachComment, index) => {
+            <section key={this.state.id} className="comment-section"> 
+                {this.state.comments.map((eachComment) => {
                 return  <Comment
-                        index={index}
                         eachComment={eachComment}
                         />
                 })}

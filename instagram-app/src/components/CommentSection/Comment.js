@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function Comment(props){
     return (
-        <div key={props.index} className="comment">
+        <div key={props.eachComment.timestamp} className="comment">
             <span className="comment-user-name">{props.eachComment.username}</span>
             <span className="comment-content">{props.eachComment.text}</span>
         </div>

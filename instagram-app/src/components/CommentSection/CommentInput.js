@@ -16,7 +16,6 @@ function CommentInput(props){
             />
 
             <button 
-            // onClick={props.handleSubmit} 
             className="comment-btn"><i className="fas fa-ellipsis-h"></i>
             </button>
         </form>

@@ -8,12 +8,11 @@ class PostContainer extends React.Component {
 
     render(){
         console.log(this.props)
-    return this.props.dummyData.map( (post, index) => {
+    return this.props.dummyData.map( item => {
 
         return (
             <Post
-            post={post}
-            key={index}
+            item={item}
             />
         )
     })

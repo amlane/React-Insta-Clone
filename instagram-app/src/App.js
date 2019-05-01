@@ -18,7 +18,10 @@ class App extends React.Component {
   }
 
   searchHandler = (e) => {
-    this.setState({ searchText: e.target.value })
+    e.preventDefault();
+    this.setState({ 
+      searchText: e.target.value,
+    })
   }
 
   render(){

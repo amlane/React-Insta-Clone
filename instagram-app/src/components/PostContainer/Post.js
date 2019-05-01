@@ -6,7 +6,7 @@ class Post extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            likes: this.props.post.likes
+            likes: this.props.item.likes
         }
     }
 
@@ -19,14 +19,14 @@ class Post extends React.Component{
     return (
         <div className="card">
         <div className="post-header">
-            <img src={this.props.post.thumbnailUrl} className="thumbnail-img" alt="thumbnail"/>
-            <div className="users-name"> {this.props.post.username} </div> 
+            <img src={this.props.item.thumbnailUrl} className="thumbnail-img" alt="thumbnail"/>
+            <div className="users-name"> {this.props.item.username} </div> 
         </div>
-        <img src={this.props.post.imageUrl} className="post-image" alt="post" />   
+        <img src={this.props.item.imageUrl} className="post-image" alt="post" />   
 
-        <div className="user-interaction" onClick={this.incrementLike}>
+        <div className="user-interaction">
            
-            <i className="far fa-heart"></i>
+            <i className="far fa-heart" onClick={this.incrementLike}></i>
             
             <i className="far fa-comment"></i>
         </div>
@@ -34,7 +34,7 @@ class Post extends React.Component{
 
 
         <CommentSection
-        comments={this.props.post.comments}
+        comments={this.props.item.comments}
         />
 
     </div>
