@@ -1,0 +1,33 @@
+.login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    padding: 15px;
+}
+
+.login-page h2 {
+    font-family: 'billabongregular';
+    font-size: 5rem;
+}
+
+.subtitle {
+    font-family: 'Roboto', sans-serif;
+    color: silver;
+}
+
+.login-card input {
+    margin: 10px;
+    height: 25px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid silver;
+}
