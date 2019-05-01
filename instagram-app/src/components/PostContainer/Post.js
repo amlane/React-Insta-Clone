@@ -1,19 +1,30 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+import UserInteraction from './UserInteraction';
 import PropTypes from "prop-types";
 
 class Post extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            likes: this.props.item.likes
+            likes: this.props.item.likes,
+            liked: false
         }
     }
 
 
-    incrementLike = () => {
-       this.setState(prevState => ({ likes: prevState.likes + 1 }))
-    }
+    toggleLikes = () => {
+       if(!this.state.liked){
+           this.setState({
+               likes: this.state.likes + 1, 
+               liked: !this.state.liked
+           })} else if (this.state.liked) {
+               this.setState({ 
+                   likes: this.state.likes - 1,
+                   liked: !this.state.liked
+                })
+           }
+       }
 
     render(){
     return (
@@ -24,13 +35,11 @@ class Post extends React.Component{
         </div>
         <img src={this.props.item.imageUrl} className="post-image" alt="post" />   
 
-        <div className="user-interaction">
-           
-            <i className="far fa-heart" onClick={this.incrementLike}></i>
-            
-            <i className="far fa-comment"></i>
-        </div>
-        <p className="likes">{this.state.likes} likes</p>
+        <UserInteraction
+        toggleLikes={this.toggleLikes}
+        likes={this.state.likes}
+        liked={this.state.liked}
+        />
 
 
         <CommentSection

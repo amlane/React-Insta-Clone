@@ -41,6 +41,10 @@
     font-weight: bold;
 }
 
+.clicked {
+    color: pink !important;
+}
+
 .card .fa-heart, 
 .card .fa-comment {
     color: gray;
