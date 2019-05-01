@@ -5,8 +5,8 @@ import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends React.Component {
-  constructor(props){
-    super(props);
+  constructor(){
+    super();
     this.state = {
       dummyData: [], 
       searchText: ""
@@ -14,7 +14,6 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    console.log("Setting the data")
     this.setState({ dummyData: dummyData })
   }
 

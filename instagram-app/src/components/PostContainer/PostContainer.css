@@ -42,3 +42,7 @@
     font-weight: bold;
 }
 
+.card .fa-heart, 
+.card .fa-comment {
+    color: gray;
+}

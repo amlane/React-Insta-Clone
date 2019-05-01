@@ -1,41 +1,23 @@
 import React from 'react';
-import PropTypes from "prop-types";
 import "./PostContainer.css";
-import CommentSection from "../CommentSection/CommentSection";
+import Post from "./Post";
 
 
-const PostContainer = props => {
-    console.log(props)
-    return props.dummyData.map( (props, index) => {
+class PostContainer extends React.Component {
+
+
+    render(){
+        console.log(this.props)
+    return this.props.dummyData.map( (post, index) => {
+
         return (
-            <div key={index} className="card">
-                <div className="post-header">
-                    <img src={props.thumbnailUrl} className="thumbnail-img" alt="thumbnail"/>
-                    <div className="users-name"> {props.username} </div> 
-                </div>
-                <img src={props.imageUrl} className="post-image" alt="post" />     
-                <div className="user-interaction">
-                    <i className="far fa-heart"></i>
-                    <i className="far fa-comment"></i>
-                </div>
-                <p className="likes">{props.likes} likes</p>
-
-
-                <CommentSection
-                comments={props.comments}
-                />
-
-            </div>
+            <Post
+            post={post}
+            key={index}
+            />
         )
     })
-}
-
-PostContainer.propTypes = {
-    username: PropTypes.string,
-    thumbnailUrl: PropTypes.string,
-    imageUrl: PropTypes.string,
-    likes: PropTypes.number,
-    timestamp: PropTypes.string
+  }
 }
 
 export default PostContainer;
