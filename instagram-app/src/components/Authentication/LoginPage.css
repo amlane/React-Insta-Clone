@@ -9,25 +9,49 @@
 .login-card {
     display: flex;
     flex-direction: column;
-    border: 1px solid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid silver;
+    box-shadow: 0 0 10px silver;
     padding: 15px;
+    height: 450px;
 }
 
 .login-page h2 {
     font-family: 'billabongregular';
     font-size: 5rem;
+    padding-bottom: 25px;
 }
 
 .subtitle {
     font-family: 'Roboto', sans-serif;
     color: silver;
+    padding-bottom: 70px;
+    font-size: 1.1rem;
 }
 
 .login-card input {
     margin: 10px;
-    height: 25px;
+    height: 35px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border: 1px solid silver;
+    text-align: center;
+    font-size: 1rem;
 }
+
+.login-card button {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: rgba(5, 162, 235, 0.938);
+    border: 0px solid transparent;
+    height: 30px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 25px;
+    color: white;
+    font-size: 1.1rem;
+}
+
