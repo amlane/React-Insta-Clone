@@ -40,6 +40,48 @@ const logo = `
         ../../instagram-logo.png
 `;
 
+const SearchContainer = styled.form`
+        border: 1px solid silver;
+        border-radius: 3px;
+`;
+
+const SearchButton = styled.button`
+        border: 0px solid transparent;
+        background: white;
+        height: 25px;
+        border-top-left-radius: 3px;
+        padding: 5px;
+
+        :hover {
+            cursor: pointer;
+        }
+
+        :focus {
+        outline: none;
+        }
+`;
+
+const SearchInput = styled.input`
+        height: 25px;
+        border: 0px solid silver;
+        border-left: 0px solid transparent;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+`;
+
+const HeaderIcons = styled.div`
+        color: gray;
+        font-size: 25px;
+        display: flex;
+        justify-content: space-around;
+        width: 200px;
+        height: auto;
+
+        :hover {
+            cursor: pointer;
+        }
+`;
+
 const SearchBar = props => {
     return (
         <Header>
@@ -47,27 +89,29 @@ const SearchBar = props => {
                 <LogoImage src={logo} alt="logo" />
                 <StyledH1>Instagram</StyledH1>
             </LogoHeader>
-            <form className="search-container">
 
-            <button 
-            className="search-btn" 
+            <SearchContainer>
+
+            <SearchButton 
             onClick={props.preventRefresh}>
             <i className="fas fa-search"></i>
-            </button>
+            </SearchButton>
 
-            <input 
-            className="input" 
+            <SearchInput 
             placeholder="search users" 
             type="search"
             onChange={props.searchHandler}
             />
             
-            </form>
-            <div className="header-icons">
+            </SearchContainer>
+
+            <HeaderIcons>
                 <i className="far fa-compass"></i>
                 <i className="far fa-heart"></i>
                 <i className="far fa-user"></i>
-            </div>
+            </HeaderIcons>
+
+
         </Header>
     )
 }
