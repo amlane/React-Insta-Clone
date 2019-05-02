@@ -35,8 +35,14 @@
     height: 60px;
     border: 0px solid;
     padding: 10px 15px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
+
+.add-comment::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+}
+
 
 .fa-ellipsis-h {
     font-size: 2rem;
@@ -47,7 +53,7 @@
 }
 
 .comment-btn {
-    background: transparent;
+    background: white;
     border: 1px solid white;
 }
 

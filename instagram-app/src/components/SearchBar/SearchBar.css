@@ -56,6 +56,10 @@ h1::before {
     font-family: 'Roboto', sans-serif;
 }
 
+.input::placeholder {
+    font-family: 'Roboto', sans-serif;
+}
+
 .header-icons {
     color: gray;
 }
