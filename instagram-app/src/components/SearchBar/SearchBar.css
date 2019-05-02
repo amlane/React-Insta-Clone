@@ -8,11 +8,11 @@
     background: #fafafa;
 } */
 
-.logo-title {
+/* .logo-title {
     display: flex;
-}
+} */
 
-h1 {
+/* h1 {
     align-self: center;
     font-family: 'billabongregular';
 }
@@ -23,7 +23,7 @@ h1::before {
     width: 1px;
     border-left: 1px solid gray;
     padding-right: 15px;
-}
+} */
 
 .fab {
     font-size: 2rem;

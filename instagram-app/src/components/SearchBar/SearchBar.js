@@ -13,13 +13,40 @@ const Header = styled.header`
         background: #fafafa;
 `;
 
+const LogoHeader = styled.div`
+        display: flex;
+`;
+
+const LogoImage = styled.img`
+        height: 60px;
+        padding-top: 3px;
+`;
+
+const StyledH1 = styled.h1`
+        align-self: center;
+        font-family: 'billabongregular';
+        font-size: 3rem;
+        padding-top: 7px;
+
+        ::before {
+            content: "";
+            height: 40px;
+            width: 1px;
+            border-left: 1px solid silver;
+            padding-right: 15px;
+`;
+
+const logo = `
+        ../../instagram-logo.png
+`;
+
 const SearchBar = props => {
     return (
         <Header>
-            <div className="logo-title">
-                <i className="fab fa-instagram "></i>
-                <h1>Instagram</h1>
-            </div>
+            <LogoHeader>
+                <LogoImage src={logo} alt="logo" />
+                <StyledH1>Instagram</StyledH1>
+            </LogoHeader>
             <form className="search-container">
 
             <button 
