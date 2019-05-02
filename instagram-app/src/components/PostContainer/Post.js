@@ -88,6 +88,7 @@ class Post extends React.Component{
 
         <CommentSection
         comments={this.props.item.comments}
+        timestamp={this.props.item.timestamp}
         />
 
     </UserCard>

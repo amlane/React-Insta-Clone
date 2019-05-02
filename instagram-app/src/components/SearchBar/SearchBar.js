@@ -16,16 +16,17 @@ const LogoHeader = styled.div`
 `;
 
 const LogoImage = styled.i`
-        color: gray;
         font-size: 45px;
         padding: 10px;
+        margin-left: 10px;
+        margin-top: 7px;
 `;
 
 const StyledH1 = styled.h1`
         align-self: center;
         font-family: 'billabongregular';
         font-size: 3rem;
-        padding-top: 7px;
+        padding: 15px;
 
         ::before {
             content: "";
@@ -38,6 +39,8 @@ const StyledH1 = styled.h1`
 const SearchContainer = styled.form`
         border: 1px solid silver;
         border-radius: 3px;
+        padding-bottom: 3px;
+        background: white;
 `;
 
 const SearchButton = styled.button`
@@ -73,7 +76,6 @@ const HeaderIcons = styled.div`
 `;
 
 const ClickMes = styled.i`
-        color: gray;
         font-size: 25px;
 
         :hover {

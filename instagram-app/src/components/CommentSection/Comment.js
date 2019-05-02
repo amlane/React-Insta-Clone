@@ -1,12 +1,31 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import styled from 'styled-components';
+
+const CommentPost = styled.section`
+    padding: 8px 15px;
+`;
+
+const CommentUserName = styled.span`
+    font-weight: bold;
+    padding-right: 10px;
+
+    :hover {
+        cursor: pointer;
+    }
+`;
+
+const CommentText = styled.span`
+    font-size: .9rem;
+`;
+
 
 function Comment(props){
     return (
-        <div key={props.eachComment.timestamp} className="comment">
-            <span className="comment-user-name">{props.eachComment.username}</span>
-            <span className="comment-content">{props.eachComment.text}</span>
-        </div>
+        <CommentPost key={props.eachComment.timestamp}>
+            <CommentUserName>{props.eachComment.username}</CommentUserName>
+            <CommentText>{props.eachComment.text}</CommentText>
+        </CommentPost>
     )
 }
 

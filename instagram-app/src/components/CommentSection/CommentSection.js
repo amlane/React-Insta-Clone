@@ -1,8 +1,20 @@
 import React from "react";
-import "./CommentSection.css"
 import CommentInput from "./CommentInput";
 import Comment from "./Comment";
 import moment from "moment";
+import styled from 'styled-components';
+import "./CommentSection.css"
+
+const CommentsSection = styled.section`
+    display: flex;
+    flex-direction: column;
+`;
+
+const TimeStamp = styled.span`
+    color: silver;
+    font-size: .8rem;
+    padding-left: 15px;
+`;
 
 class CommentSection extends React.Component{
     constructor(props) {
@@ -34,20 +46,20 @@ class CommentSection extends React.Component{
 
     render() {
         return ( 
-            <section className="comment-section"> 
+            <CommentsSection> 
                 {this.state.comments.map((eachComment) => {
                 return  <Comment
                         eachComment={eachComment}
                         />
                 })}
-                <span className="timestamp">{moment().startOf('hour').fromNow()}</span>
+                <TimeStamp>{moment(this.props.timestamp, "MMMM Do YYYY, hh:mm:ss a").fromNow()}</TimeStamp>
                 <hr/>
                 <CommentInput 
                 comment={this.state.comment}
                 handleInput={this.handleInput}
                 addNewComment={this.addNewComment}
                 />
-            </section> )
+            </CommentsSection> )
  }
 }
 
