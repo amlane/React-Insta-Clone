@@ -1,9 +1,21 @@
 import React from 'react';
+
+import styled from 'styled-components';
 import './SearchBar.css';
+
+const Header = styled.header`
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 85px;
+        width: 1000px;
+        position: fixed;
+        background: #fafafa;
+`;
 
 const SearchBar = props => {
     return (
-        <header className="header-container">
+        <Header>
             <div className="logo-title">
                 <i className="fab fa-instagram "></i>
                 <h1>Instagram</h1>
@@ -29,7 +41,7 @@ const SearchBar = props => {
                 <i className="far fa-heart"></i>
                 <i className="far fa-user"></i>
             </div>
-        </header>
+        </Header>
     )
 }
 

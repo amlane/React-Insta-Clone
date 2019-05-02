@@ -1,12 +1,12 @@
-.header-container {
+/* .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 85px;
-    width: 980px;
+    width: 1000px;
     position: fixed;
     background: #fafafa;
-}
+} */
 
 .logo-title {
     display: flex;
