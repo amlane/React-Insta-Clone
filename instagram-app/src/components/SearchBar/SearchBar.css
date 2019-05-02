@@ -3,10 +3,9 @@
     justify-content: space-between;
     align-items: center;
     height: 85px;
-    width: 1200px;
-    min-width: 1200px;
+    width: 980px;
     position: fixed;
-    background: white;
+    background: #fafafa;
 }
 
 .logo-title {
@@ -39,7 +38,7 @@ h1::before {
 
 .search-btn{
     border: 0px solid transparent;
-    background: transparent;
+    background: white;
     height: 25px;
     border-top-left-radius: 3px;
     padding: 5px;

@@ -1,6 +1,8 @@
 .App {
   min-width: 1200px;
   height: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .card-container {

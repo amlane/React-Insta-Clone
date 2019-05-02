@@ -15,6 +15,7 @@
     box-shadow: 0 0 10px silver;
     padding: 15px;
     height: 450px;
+    width: 300px;
 }
 
 .login-page h2 {
@@ -33,25 +34,30 @@
 .login-card input {
     margin: 10px;
     height: 35px;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     border: 1px solid silver;
     text-align: center;
     font-size: 1rem;
 }
 
 .login-card button {
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     background: rgba(5, 162, 235, 0.938);
     border: 0px solid transparent;
-    height: 30px;
-    width: 80%;
+    height: 35px;
+    width: 75%;
     margin: 0 auto;
     margin-top: 25px;
     color: white;
     font-size: 1.1rem;
+    transition: .2s linear;
+}
+
+.login-card button:hover {
+    cursor: pointer;
 }
 
