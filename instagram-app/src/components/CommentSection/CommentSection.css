@@ -41,26 +41,26 @@
 } */
 
 
-.fa-ellipsis-h {
+/* .fa-ellipsis-h {
     font-size: 2rem;
 }
 
 .fa-ellipsis-h:hover {
     cursor: pointer;
-}
+} */
 
-.comment-btn {
+/* .comment-btn {
     background: white;
     border: 1px solid white;
-}
+} */
 
-input:focus,
+/* input:focus,
 button:focus {
     outline: none;
-}
+} */
 
-hr {
+/* hr {
     color: rgb(199, 198, 198);
     width: 96%;
     margin: 0 auto;
-}
+} */

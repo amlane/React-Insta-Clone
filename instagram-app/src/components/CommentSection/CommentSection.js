@@ -3,7 +3,6 @@ import CommentInput from "./CommentInput";
 import Comment from "./Comment";
 import moment from "moment";
 import styled from 'styled-components';
-import "./CommentSection.css"
 
 const CommentsSection = styled.section`
     display: flex;
@@ -14,6 +13,12 @@ const TimeStamp = styled.span`
     color: silver;
     font-size: .8rem;
     padding-left: 15px;
+`;
+
+const BorderTop = styled.hr`
+    color: rgb(199, 198, 198);
+    width: 96%;
+    margin: 15px auto; 
 `;
 
 class CommentSection extends React.Component{
@@ -53,7 +58,7 @@ class CommentSection extends React.Component{
                         />
                 })}
                 <TimeStamp>{moment(this.props.timestamp, "MMMM Do YYYY, hh:mm:ss a").fromNow()}</TimeStamp>
-                <hr/>
+                <BorderTop/>
                 <CommentInput 
                 comment={this.state.comment}
                 handleInput={this.handleInput}

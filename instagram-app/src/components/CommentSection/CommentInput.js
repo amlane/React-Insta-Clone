@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const AddNewComment = styled.form`
         display: flex;
+        margin-bottom: 15px;
 `;
 
 const AddCommentSection = styled.input`
@@ -16,12 +17,32 @@ const AddCommentSection = styled.input`
             font-family: 'Roboto', sans-serif;
             font-size: 0.9rem;
         }
+
+        :focus {
+            outline: none;
+        }
+`;
+
+const AddCommentButton = styled.button`
+    background: white;
+    border: 1px solid white;
+
+    :focus {
+        outline: none;
+    }
+`;
+
+const DotDotDot = styled.i`
+font-size: 2rem;
+
+:hover {
+    cursor: pointer;
+}
 `;
 
 function CommentInput(props){
     return (
         <AddNewComment 
-        className="add-comment-section"
         onSubmit={props.addNewComment}
         >
             <AddCommentSection 
@@ -32,9 +53,9 @@ function CommentInput(props){
 
             />
 
-            <button 
-            className="comment-btn"><i className="fas fa-ellipsis-h"></i>
-            </button>
+            <AddCommentButton>
+                <DotDotDot className="fas fa-ellipsis-h"></DotDotDot>
+            </AddCommentButton>
         </AddNewComment>
     )
 }
