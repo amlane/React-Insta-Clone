@@ -1,4 +1,4 @@
-.card {
+/* .card {
     display: flex;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
@@ -8,45 +8,45 @@
     width: 300px;
     height: auto;
     background: white;
-}
+} */
 
-.post-header {
+/* .post-header {
     display: flex;
     width: 85%;
-}
+} */
 
-.thumbnail-img {
+/* .thumbnail-img {
     width: 65px;
     height: 65px;
     border-radius: 50%;
     padding: 15px;
-}
+} */
 
-.users-name{
+/* .users-name{
     align-self: center;
     font-weight: bold;
     letter-spacing: .5px;
-}
+} */
 
-.users-name:hover {
+/* .users-name:hover {
     cursor: pointer;
-}
+} */
 
-.post-image {
+/* .post-image {
     width: 98%;
     margin: 0 auto;
-}
+} */
 
-.likes {
+/* .likes {
     padding-left: 15px;
     font-weight: bold;
-}
+} */
+
+/* .fa-heart, 
+.fa-comment {
+    color: gray;
+} */
 
 .clicked {
     color: pink !important;
-}
-
-.card .fa-heart, 
-.card .fa-comment {
-    color: gray;
 }

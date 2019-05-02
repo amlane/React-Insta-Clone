@@ -1,20 +1,39 @@
 import React from 'react';
+import styled from 'styled-components';
 import "./PostContainer.css"
+
+const Likes = styled.p`
+    padding-left: 15px;
+    font-weight: bold;
+`;
+
+const ClickMes = styled.i`
+    color: gray;
+    font-size: 25px;
+    padding: 10px;
+
+    :hover {
+        cursor: pointer;    
+    }
+`;
+
 
 const UserInteraction = props => {
     let updateLikeBtn = props.liked ? " clicked" : "";
     return (
         <>
-        <div className="user-interaction">
-           
-            <i 
-            className={`far fa-heart liked ${updateLikeBtn}`} 
-            onClick={props.toggleLikes}>
-            </i>
+            <div className="user-interaction">
             
-            <i className="far fa-comment"></i>
-        </div>
-        <p className="likes">{props.likes} likes</p>
+                <ClickMes 
+                className={`far fa-heart liked ${updateLikeBtn}`} 
+                onClick={props.toggleLikes}>
+                </ClickMes>
+                
+                <ClickMes
+                className="far fa-comment">
+                </ClickMes>
+            </div>
+            <Likes>{props.likes} likes</Likes>
         </>
     )
 }

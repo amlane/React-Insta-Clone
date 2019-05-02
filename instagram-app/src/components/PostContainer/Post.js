@@ -1,7 +1,50 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import UserInteraction from './UserInteraction';
+
+import styled from 'styled-components';
 import PropTypes from "prop-types";
+
+const UserCard = styled.section`
+        display: flex;
+        flex-direction: column;
+        font-family: 'Roboto', sans-serif;
+        border: 1px solid silver;
+        box-shadow: 0 0 8px silver;
+        margin: 20px;
+        width: 300px;
+        height: auto;
+        background: white;
+`;
+
+const CardHeader = styled.header`
+        display: flex;
+        width: 85%;
+`;
+
+const ThumbnailProfilePic = styled.img`
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        padding: 15px;
+`;
+
+const UsersName = styled.div`
+        align-self: center;
+        font-weight: bold;
+        letter-spacing: .5px;
+
+        :hover{
+            cursor: pointer;
+        }
+`;
+
+const PostImage = styled.img`
+        width: 98%;
+        margin: 0 auto;
+`;
+
+
 
 class Post extends React.Component{
     constructor(props){
@@ -28,12 +71,13 @@ class Post extends React.Component{
 
     render(){
     return (
-        <div className="card">
-        <div className="post-header">
-            <img src={this.props.item.thumbnailUrl} className="thumbnail-img" alt="thumbnail"/>
-            <div className="users-name"> {this.props.item.username} </div> 
-        </div>
-        <img src={this.props.item.imageUrl} className="post-image" alt="post" />   
+        <UserCard>
+        <CardHeader>
+            <ThumbnailProfilePic src={this.props.item.thumbnailUrl} className="thumbnail-img" alt="thumbnail"/>
+            <UsersName> {this.props.item.username} </UsersName> 
+        </CardHeader>
+
+        <PostImage src={this.props.item.imageUrl} className="post-image" alt="post" />   
 
         <UserInteraction
         toggleLikes={this.toggleLikes}
@@ -46,7 +90,7 @@ class Post extends React.Component{
         comments={this.props.item.comments}
         />
 
-    </div>
+    </UserCard>
     )
     }
 }

@@ -1,7 +1,5 @@
 import React from 'react';
-
 import styled from 'styled-components';
-import './SearchBar.css';
 
 const Header = styled.header`
         display: flex;
@@ -17,9 +15,10 @@ const LogoHeader = styled.div`
         display: flex;
 `;
 
-const LogoImage = styled.img`
-        height: 60px;
-        padding-top: 3px;
+const LogoImage = styled.i`
+        color: gray;
+        font-size: 45px;
+        padding: 10px;
 `;
 
 const StyledH1 = styled.h1`
@@ -34,10 +33,6 @@ const StyledH1 = styled.h1`
             width: 1px;
             border-left: 1px solid silver;
             padding-right: 15px;
-`;
-
-const logo = `
-        ../../instagram-logo.png
 `;
 
 const SearchContainer = styled.form`
@@ -71,22 +66,27 @@ const SearchInput = styled.input`
 
 const HeaderIcons = styled.div`
         color: gray;
-        font-size: 25px;
         display: flex;
         justify-content: space-around;
         width: 200px;
         height: auto;
+`;
+
+const ClickMes = styled.i`
+        color: gray;
+        font-size: 25px;
 
         :hover {
-            cursor: pointer;
+                cursor: pointer;    
         }
 `;
+
 
 const SearchBar = props => {
     return (
         <Header>
             <LogoHeader>
-                <LogoImage src={logo} alt="logo" />
+                <LogoImage className="fab fa-instagram"></LogoImage>
                 <StyledH1>Instagram</StyledH1>
             </LogoHeader>
 
@@ -106,9 +106,9 @@ const SearchBar = props => {
             </SearchContainer>
 
             <HeaderIcons>
-                <i className="far fa-compass"></i>
-                <i className="far fa-heart"></i>
-                <i className="far fa-user"></i>
+                <ClickMes className="far fa-compass"></ClickMes>
+                <ClickMes className="far fa-heart"></ClickMes>
+                <ClickMes className="far fa-user"></ClickMes>
             </HeaderIcons>
 
 
