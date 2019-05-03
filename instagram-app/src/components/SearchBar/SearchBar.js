@@ -59,11 +59,15 @@ const SearchButton = styled.button`
         }
 `;
 
+const SearchIcon = styled.i`
+        color: gray;
+`;
+
 const SearchInput = styled.input`
         height: 25px;
+        width: 150px;
         border: 0px solid silver;
         border-left: 0px solid transparent;
-        text-align: center;
         font-family: 'Roboto', sans-serif;
 
         :focus {
@@ -77,6 +81,7 @@ const HeaderIcons = styled.div`
         justify-content: space-around;
         width: 200px;
         height: auto;
+        margin-left: 55px;
 `;
 
 const ClickMes = styled.i`
@@ -100,11 +105,11 @@ const SearchBar = props => {
 
             <SearchButton 
             onClick={props.preventRefresh}>
-            <i className="fas fa-search"></i>
+            <SearchIcon className="fas fa-search"></SearchIcon>
             </SearchButton>
 
             <SearchInput 
-            placeholder="search users" 
+            placeholder=""
             type="search"
             onChange={props.searchHandler}
             />
