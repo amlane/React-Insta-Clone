@@ -52,9 +52,10 @@ class CommentSection extends React.Component{
     render() {
         return ( 
             <CommentsSection> 
-                {this.state.comments.map((eachComment) => {
+                {this.state.comments.map(eachComment => {
                 return  <Comment
                         eachComment={eachComment}
+                        key={eachComment.timestamp}
                         />
                 })}
                 <TimeStamp>{moment(this.props.timestamp, "MMMM Do YYYY, hh:mm:ss a").fromNow()}</TimeStamp>

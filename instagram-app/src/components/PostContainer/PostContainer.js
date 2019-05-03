@@ -13,6 +13,7 @@ class PostContainer extends React.Component {
         return (
             <Post
             item={item}
+            key={item.timestamp}
             />
         )
     })

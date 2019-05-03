@@ -22,7 +22,7 @@ const CommentText = styled.span`
 
 function Comment(props){
     return (
-        <CommentPost key={props.eachComment.timestamp}>
+        <CommentPost>
             <CommentUserName>{props.eachComment.username}</CommentUserName>
             <CommentText>{props.eachComment.text}</CommentText>
         </CommentPost>

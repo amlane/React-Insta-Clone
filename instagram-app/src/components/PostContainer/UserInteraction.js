@@ -5,6 +5,7 @@ import "./PostContainer.css"
 const Likes = styled.p`
     padding-left: 15px;
     font-weight: bold;
+    font-size: .9rem;
 `;
 
 const ClickMes = styled.i`
