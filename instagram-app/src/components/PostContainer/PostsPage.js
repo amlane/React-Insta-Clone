@@ -21,12 +21,17 @@ class PostsPage extends React.Component {
         this.setState({ 
           searchText: e.target.value,
         })
-      }
+      }      
     
       preventRefresh = (e) => {
         e.preventDefault();
       }
-    
+
+      handleLogOut = e => {
+        localStorage.removeItem('username')
+        window.location.reload();
+      }
+
       render(){
       return (
         <div className="App">
@@ -34,6 +39,7 @@ class PostsPage extends React.Component {
           <SearchBar
           searchHandler={this.searchHandler}
           preventRefresh={this.preventRefresh}
+          handleLogOut={this.handleLogOut}
           />
     
          <div className="card-container"> 

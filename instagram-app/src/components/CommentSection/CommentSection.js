@@ -35,7 +35,7 @@ class CommentSection extends React.Component{
         e.preventDefault(); 
         if(!this.state.comment) return;
         let newComment = { 
-            username: "MzAnthropical", 
+            username: localStorage.getItem('username'), 
             text: this.state.comment
         };
         this.setState({

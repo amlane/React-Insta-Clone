@@ -65,6 +65,10 @@ const SearchInput = styled.input`
         border-left: 0px solid transparent;
         text-align: center;
         font-family: 'Roboto', sans-serif;
+
+        :focus {
+           outline: none;
+        }
 `;
 
 const HeaderIcons = styled.div`
@@ -110,7 +114,7 @@ const SearchBar = props => {
             <HeaderIcons>
                 <ClickMes className="far fa-compass"></ClickMes>
                 <ClickMes className="far fa-heart"></ClickMes>
-                <ClickMes className="far fa-user"></ClickMes>
+                <ClickMes onClick={props.handleLogOut} className="far fa-user"></ClickMes>
             </HeaderIcons>
 
 
