@@ -1,0 +1,66 @@
+/* .comment-section {
+    display: flex;
+    flex-direction: column;
+} */
+
+/* .comment {
+    padding: 8px 15px;
+} */
+
+/* .comment-user-name {
+    font-weight: bold;
+    padding-right: 10px;
+} */
+
+/* .comment-user-name:hover {
+    cursor: pointer;
+} */
+
+
+/* .timestamp {
+    color: silver;
+    padding: 10px 15px;
+    font-size: .8rem;
+} */
+
+/* .add-comment-section {
+    display: flex;
+} */
+
+/* .add-comment {
+    width: 85%;
+    height: 60px;
+    border: 0px solid;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+} */
+
+/* .add-comment::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+} */
+
+
+/* .fa-ellipsis-h {
+    font-size: 2rem;
+}
+
+.fa-ellipsis-h:hover {
+    cursor: pointer;
+} */
+
+/* .comment-btn {
+    background: white;
+    border: 1px solid white;
+} */
+
+/* input:focus,
+button:focus {
+    outline: none;
+} */
+
+/* hr {
+    color: rgb(199, 198, 198);
+    width: 96%;
+    margin: 0 auto;
+} */

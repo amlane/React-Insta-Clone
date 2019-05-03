@@ -1,0 +1,14 @@
+.App {
+  min-width: 1200px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 75px;
+}

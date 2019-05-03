@@ -1,0 +1,52 @@
+/* .card {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid silver;
+    box-shadow: 0 0 8px silver;
+    margin: 20px;
+    width: 300px;
+    height: auto;
+    background: white;
+} */
+
+/* .post-header {
+    display: flex;
+    width: 85%;
+} */
+
+/* .thumbnail-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    padding: 15px;
+} */
+
+/* .users-name{
+    align-self: center;
+    font-weight: bold;
+    letter-spacing: .5px;
+} */
+
+/* .users-name:hover {
+    cursor: pointer;
+} */
+
+/* .post-image {
+    width: 98%;
+    margin: 0 auto;
+} */
+
+/* .likes {
+    padding-left: 15px;
+    font-weight: bold;
+} */
+
+/* .fa-heart, 
+.fa-comment {
+    color: gray;
+} */
+
+.clicked {
+    color: pink !important;
+}
